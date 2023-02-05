@@ -1,5 +1,5 @@
 ## Welcome to Codewars
-Insite is two js file, includes Numbers and String Katas
+Insite is two js files, includes Numbers and String Katas
 
 
 ## Materials
