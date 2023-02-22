@@ -109,26 +109,25 @@ const fruitsArrayLength = fruits.length;
 Имя переменной	  Ожидаемое значение
 lastElementIndex	Индекс последнего элемента масcива 
                   fruits через длина_массива - 1
-lastElement	      Значение последнего элемента массива
+lastElement	      Значение последнего элемента массива*/
 
-const lastElementIndex = fruits.length - 1;
-const lastElement = fruits[lastElementIndex];*/
+// const lastElementIndex = fruits.length - 1;
+// const lastElement = fruits[lastElementIndex];
 
 /*Задание 9
-Напиши функцию getExtremeElements(array) которая принимает один параметр array - массив элементов произвольной длины. Функция должна возвращать массив из двух элементов - первого и последнего элемента параметра array.
+Напиши функцию getExtremeElements(array) которая принимает один параметр array - массив элементов произвольной длины. Функция должна возвращать массив из двух элементов - первого и последнего элемента параметра array.*/
 
-function getExtremeElements(array) {
-  return [array[0], array[array.length - 1]];
-}*/
+// function getExtremeElements(array) {
+//   return [array[0], array[array.length - 1]];}
 
 /*Задание 10
-Дополни код функции splitMessage(message, delimiter) так, чтобы она возвращала в переменной words результат разделения строки message по разделителю delimiter - массив строк.
+Дополни код функции splitMessage(message, delimiter) так, чтобы она возвращала в переменной words результат разделения строки message по разделителю delimiter - массив строк.*/
 
-function splitMessage(message, delimiter) {
-  let words;
-  words = message.split(delimiter);
-  return words;
-}*/
+// function splitMessage(message, delimiter) {
+//   let words;
+//   words = message.split(delimiter);
+//   return words;
+// }
 
 /*Задание 11
 Сервису гравировки украшений нужна функция, которая бы автоматически считала цену гравировки, в зависимости от количества слов и цены за слово.
@@ -169,15 +168,138 @@ function slugify(title) {
   let slug = lowerWords.join("-");
 
   return slug;
+
   // return title.toLowerCase().split(" ").join("-");
 }
 
 slugify("How to become a JUNIOR developer in TWO WEEKS");
 
-/*Задание 32
-Напиши функцию includes(array, value), которая делает тоже самое, что и метод массива массив.includes(значение) - проверяет, есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
+/*Задание 14
+Метод slice(begin, end) возвращает новый массив, содержащий копию части исходного массива, не изменяя его. Копия делается от begin и до, но не включая, end - индексы элементов исходного массива.
 
-При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение). */
+Если begin и end не указаны, будет создана полная копия исходного массива.
+Если не указан end, копирование будет от start и до конца исходного массива.
+Если значение start отрицательное, а end не указан, то будут скопированы последние N элементов.
+
+
+Дополни код так, чтобы переменные содержали частичные копии исходного массива fruits.
+firstTwoEls - массив из первых двух элементов
+nonExtremeEls - массив из всех элементов кроме первого и последнего
+lastThreeEls - массив из трёх последних элементов*/
+
+// const fruits = ["apple", "plum", "pear", "orange", "banana"];
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, 4);
+// const lastThreeEls = fruits.slice(-3);
+
+/*Задание 15
+Дополни код так, чтобы в переменной allClients получился массив всех элементов массивов oldClients и newClients.
+const allPlanets = firstArray.concat(secondArray, thirdArray);
+*/
+
+const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
+const newClients = ["Peach", "Houston"];
+const allClients = oldClients.concat(newClients);
+
+/*Задание 16
+Напиши функцию makeArray(firstArray, secondArray, maxLength) для создания нового массива со всеми элементами двух исходных firstArray и secondArray. Параметр maxLength содержит максимально допустимую длину нового массива.
+
+Если количество элементов нового массива больше maxLength, функция должна вернуть копию массива длиной maxLength элементов. В противном случае функция должна вернуть новый массив целиком.
+*/
+
+function makeArray(firstArray, secondArray, maxLength) {
+  const newArr = firstArray.concat(secondArray);
+  if (newArr.length > maxLength) {
+    return newArr.slice(0, maxLength);
+  } else {
+    return newArr;
+  }
+}
+
+/*Задание 17
+Дополни цикл for так, чтобы он логировал все целые числа в диапазоне от start до end включительно.
+*/
+
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) {
+//   console.log(i);
+// }
+
+/*Задание 18
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+
+function calculateTotal(number) {
+  let total = 0;
+  for (let i = 1; i <= number; i++) {
+    total += i;
+  }
+  return total;
+}
+/*Задание 19
+Дополни код цикла for так, чтобы он последовательно логировал все элементы массива fruits.
+*/
+
+const fruits = ["apple", "plum", "pear", "orange"];
+
+for (let i = 0; i < fruits.length; i += 1) {
+  const fruit = fruits[i];
+  console.log(fruit);
+}
+
+/*Задание 20
+Напиши функцию calculateTotalPrice(order), которая принимает один параметр order - массив чисел, и рассчитывает общую сумму его элементов. Общая сумма элементов должна сохраняться в переменной total, которая возвращается, как результат работы функции.
+*/
+
+function calculateTotalPrice(order) {
+  let total = 0;
+  for (let i = 0; i < order.length; i += 1) {
+    const item = order[i];
+    total += item;
+  }
+  return total;
+}
+
+/*Задание 21
+Напиши функцию findLongestWord(string) которая принимает произвольную строку состоящую только из слов разделённых пробелом (параметр string) и возвращает самое длинное слово в этой строке.
+*/
+
+function findLongestWord(string) {}
+
+/*Задание 22
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 23
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 24
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 25
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 26
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 27
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 28
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 29
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 30
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 31
+Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+*/
+/*Задание 32
+Дополни код так, чтобы в переменной allClients получился массив всех элементов массивов oldClients и newClients.*/
 
 function includes(array, value) {
   for (let i = 0; i < array.length; i++) {

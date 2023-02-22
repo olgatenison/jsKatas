@@ -27,15 +27,17 @@ function mergeArrays(a, b) {
 }
 */
 
-function mergeArrays(arr1, arr2) {
-  const oneArr = [...arr1, ...arr2]; // merge both arrays
-  const sortedArr = oneArr.sort((a, b) => a - b); // sort
-  const clearArr = [...new Set(sortedArr)]; // remove duplicates
-  return clearArr;
-}
+// function mergeArrays(arr1, arr2) {
+//   const oneArr = [...arr1, ...arr2]; // merge both arrays
+//   const sortedArr = oneArr.sort((a, b) => a - b); // sort
+//   const clearArr = [...new Set(sortedArr)]; // remove duplicates
+//   return clearArr;
+// }
 
-const arr1 = [1, 3, 5, 7, 9];
-const arr2 = [10, 8, 6, 4, 2];
-const result = mergeArrays(arr1, arr2);
+// const arr1 = [1, 3, 5, 7, 9];
+// const arr2 = [10, 8, 6, 4, 2];
+// const result = mergeArrays(arr1, arr2);
 
-console.log(result); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(result);
+
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
