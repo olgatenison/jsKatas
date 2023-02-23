@@ -242,12 +242,12 @@ function calculateTotal(number) {
 Дополни код цикла for так, чтобы он последовательно логировал все элементы массива fruits.
 */
 
-const fruits = ["apple", "plum", "pear", "orange"];
+// const fruits = ["apple", "plum", "pear", "orange"];
 
-for (let i = 0; i < fruits.length; i += 1) {
-  const fruit = fruits[i];
-  console.log(fruit);
-}
+// for (let i = 0; i < fruits.length; i += 1) {
+//   const fruit = fruits[i];
+//   console.log(fruit);
+// }
 
 /*Задание 20
 Напиши функцию calculateTotalPrice(order), которая принимает один параметр order - массив чисел, и рассчитывает общую сумму его элементов. Общая сумма элементов должна сохраняться в переменной total, которая возвращается, как результат работы функции.
@@ -265,8 +265,19 @@ function calculateTotalPrice(order) {
 /*Задание 21
 Напиши функцию findLongestWord(string) которая принимает произвольную строку состоящую только из слов разделённых пробелом (параметр string) и возвращает самое длинное слово в этой строке.
 */
+findLongestWord("Google do a roll");
 
-function findLongestWord(string) {}
+function findLongestWord(string) {
+  let words = string.split(" ");
+  let longerstWord = "";
+  for (let i = 0; i < words.length; i += 1) {
+    const word = words[i];
+    console.log(word);
+    longerstWord = longerstWord.length > word.length ? longerstWord : word;
+  }
+
+  return longerstWord;
+}
 
 /*Задание 22
 Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
