@@ -228,3 +228,44 @@ function disemvowel(str) {
   }
   return newStr;
 }
+
+/*For this kata you will have to forget how to add two numbers.
+It can be best explained using the following meme:
+
+Dayane Rivas adding up a sum while competing in the Guatemalan television show "Combate" in May 2016 - 208+248 = 4416
+In simple terms, our method does not like the principle of carrying over numbers and just writes down every number it calculates :-)
+You may assume both integers are positive integers.
+______________________________________________________________________________
+padStart() - это метод строк в JavaScript, который добавляет заданный символ в начало строки до указанной длины.
+Например:
+
+const str = "5";
+const paddedStr = str.padStart(4, "0");
+console.log(paddedStr); // "0005"
+*/
+
+function addStrings(num1, num2) {
+  // Добавляем нули для выравнивания строк
+  num1 = num1.padStart(num2.length, "0");
+  num2 = num2.padStart(num1.length, "0");
+
+  // Последовательно складываем цифры без учета переноса разряда
+  let sum = "";
+  for (let i = 0; i < num1.length; i++) {
+    let digit1 = parseInt(num1[i]);
+    let digit2 = parseInt(num2[i]);
+    sum += digit1 + digit2;
+  }
+
+  // Возвращаем полученную строку
+  return sum;
+}
+
+const nums = [2, 4, 6, 8];
+let sum = "0";
+
+for (let i = 0; i < nums.length; i++) {
+  sum = add(sum, nums[i].toString());
+}
+
+console.log(sum); // выведет "20020"
