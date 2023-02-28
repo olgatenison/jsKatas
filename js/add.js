@@ -29,15 +29,23 @@ function add(num1, num2) {
   //    console.log(paddedA);
 
   // делаем из строки массив чисел
+  let arrA = paddedA.split("");
+
+  let arrB = paddedB.split("");
+
   // итерииуем по каждому и прибавляем с одинаковым индексом
-  // результат пушим? в новый масив
-  // склеиваем массив
-  //делаем из этого число
+  let sum = [];
 
-  let sum = "";
+  for (let i = 0; i < arrA.length; i++) {
+    // результат пушим в новый масив
+    sum.push(Number(arrA[i]) + Number(arrB[i]));
+  } // склеиваем массив
 
-  for (let i = 0; i <= a.length; i++) {
-    console.log(a[i]);
-  }
+  let result = Number(sum.join(""));
+  return result;
+  console.log(result);
 }
+
+//делаем из этого число
+
 add(1222, 30277); //31499
