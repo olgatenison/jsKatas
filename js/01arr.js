@@ -6,11 +6,11 @@ Examples
 These are example of how to convert a number to an ascii Character:
 Javascript => String.fromCharCode(97) 
 
-
-var ArrowFunc = function (arr) {
-  return arr.map((num) => String.fromCharCode(num)).join("");
-};
 */
+
+// var ArrowFunc = function (arr) {
+//   return arr.map((num) => String.fromCharCode(num)).join("");
+// };
 
 /*DESCRIPTION:
 You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted in asc order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
@@ -40,4 +40,42 @@ function mergeArrays(a, b) {
 
 // console.log(result);
 
-// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+/*DESCRIPTION:
+Colour plays an important role in our lifes. Most of us like this colour better then another. User experience specialists believe that certain colours have certain psychological meanings for us.
+
+You are given a 2D array, composed of a colour and its 'common' association in each array element. The function you will write needs to return the colour as 'key' and association as its 'value'.
+
+For example:
+
+var array = [["white", "goodness"], ...] //returns [{white: 'goodness'}, ...]*/
+
+function colourAssociation(array) {
+  // create an empty array to hold the result
+  var result = [];
+
+  // loop through each element in the input array
+  for (var i = 0; i < array.length; i++) {
+    // extract the color and association from the current element
+    var color = array[i][0];
+    var association = array[i][1];
+
+    // create a new object with the color as the key and association as the value
+    var obj = {};
+    obj[color] = association;
+
+    // add the new object to the result array
+    result.push(obj);
+  }
+
+  // return the result array
+  return result;
+}
+
+colourAssociation([
+  ["white", "goodness"],
+  ["blue", "tranquility"],
+]);
+
+// [{white:"goodness"},{blue:"tranquility"}]
