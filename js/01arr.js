@@ -78,4 +78,53 @@ colourAssociation([
   ["blue", "tranquility"],
 ]);
 
-// [{white:"goodness"},{blue:"tranquility"}]
+// [{white:"goodness"},{blue:"tranquility"}]\
+
+/*Be Concise IV - Index of an element in an array
+Task
+Provided is a function find which accepts two parameters in the following order: array, element and returns the index of the element if found and "Not found" otherwise. Your task is to shorten the code as much as possible in order to meet the strict character count requirements of the Kata. (no more than 85) You may assume that all array elements are unique. (function find(array, element) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === element) return i;
+  }
+  return "Not found";
+})*/
+
+function find(arr, el) {
+  return arr.indexOf(el) >= 0 ? arr.indexOf(el) : "Not found";
+}
+
+/*Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+For example,
+
+[true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+The correct answer would be 17.
+
+Hint: Don't forget to check for bad values like null/undefined
+  
+  function countSheeps(arrayOfSheep) {
+  // TODO May the force be with you
+})
+
+*/
+
+function countSheeps(arrayOfSheep) {
+  let count = 0;
+  for (let i = 0; i < arrayOfSheep.length; i++) {
+    if (arrayOfSheep[i] === true) {
+      count++;
+    }
+  }
+  return count;
+}
+
+/*
+function countSheeps(arr) {
+  return arr.filter(Boolean).length;
+}
+*/

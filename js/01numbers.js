@@ -182,3 +182,40 @@ function perimeterSequence(a, n) {
   return result;
 }
 //return 4 * n * a;
+
+/*to find the volume (centimeters cubed) of a cuboid you use the formula:
+volume = Length * Width * Height
+But someone forgot to use proper record keeping, so we only have the volume, and the length of a single side!
+It's up to you to find out whether the cuboid has equal sides (= is a cube).
+Return true if the cuboid could have equal sides, return false otherwise.
+Return false for invalid numbers too (e.g volume or side is less than or equal to 0).
+Note: side will be an integer*/
+
+// var cubeChecker = function(volume, side){
+//   if (volume <= 0 || side <= 0) { // Invalid input
+//     return false;
+//   }
+//   var volume_cube = Math.pow(side, 3); // Calculate volume of cube
+//   if (volume === volume_cube) { // Check if volumes are equal
+//     return true; // Cube could have equal sides
+//   } else {
+//     return false; // Cube does not have equal sides
+//   }
+// };
+
+function cubeChecker(volume, side) {
+  return volume > 0 && side > 0 && volume === side ** 3;
+}
+
+/*Be Concise IV - Index of an element in an array
+Task
+Provided is a function find which accepts two parameters in the following order: array, element and returns the index of the element if found and "Not found" otherwise. Your task is to shorten the code as much as possible in order to meet the strict character count requirements of the Kata. (no more than 85) You may assume that all array elements are unique. (function find(array, element) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === element) return i;
+  }
+  return "Not found";
+})*/
+
+function find(arr, el) {
+  return arr.indexOf(el) >= 0 ? arr.indexOf(el) : "Not found";
+}
