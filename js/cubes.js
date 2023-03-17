@@ -7,20 +7,4 @@
 
 // https://www.codewars.com/kata/5763bb0af716cad8fb000580
 
-var countSquares = function (cuts) {
-  // Total number of cubes
-  let totalCubes = (cuts + 1) ** 3;
-
-  // Number of cubes with no red faces
-  let noRedCubes = 0;
-  if (cuts > 0) {
-    noRedCubes += 6 * (cuts - 1) * (cuts - 1) + 2;
-    noRedCubes += 6 * (cuts - 1) * (cuts - 2);
-    noRedCubes += 3 * (cuts - 1);
-  }
-
-  // Number of cubes with at least one red face
-  let redCubes = totalCubes - noRedCubes;
-
-  return redCubes;
-};
+countSquares = (cuts) => (cuts == 0 ? 1 : 6 * cuts * cuts + 2);
