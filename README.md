@@ -1,12 +1,11 @@
 ## Welcome to Codewars
-Insite are two js files: Numbers and String Katas
 
+Insite are two js files: Numbers and String Katas
 
 ## Materials
 
 - [Числа](https://learn.javascript.ru/number)
 - [Строки](https://learn.javascript.ru/string)
-
 
 ## Practics
 
@@ -36,3 +35,13 @@ Insite are two js files: Numbers and String Katas
 - 8 kyu https://www.codewars.com/kata/type-of-sum
 - 8 kyu https://www.codewars.com/kata/will-you-make-it
 
+## Numbers and strings
+
+- 7 kyu https://www.codewars.com/kata/which-color-is-the-brightest
+- 7 kyu https://www.codewars.com/kata/disemvowel-trolls
+- 7 kyu https://www.codewars.com/kata/isograms
+- 7 kyu https://www.codewars.com/kata/digits-explosion
+- 6 kyu https://www.codewars.com/kata/handshake-problem
+- 6 kyu https://www.codewars.com/kata/duplicate-encoder
+- 6 kyu https://www.codewars.com/kata/n-th-fibonacci
+- 4 kyu https://www.codewars.com/kata/human-readable-duration-format
