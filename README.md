@@ -36,7 +36,7 @@ Insite are two js files: Numbers and String Katas
 - 8 kyu https://www.codewars.com/kata/will-you-make-it
   
 - 7 kyu https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript
-- 
+- 8 kyu https://www.codewars.com/kata/576b93db1129fcf2200001e6/javascript
 ## Numbers and strings
 
 - 7 kyu https://www.codewars.com/kata/which-color-is-the-brightest
