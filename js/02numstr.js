@@ -155,3 +155,26 @@ console.log(explode("102269")); // Вывод: "12222666666"
 // .map((e) => e.repeat(+e)): Это метод массива, который применяет указанную функцию (в данном случае, стрелочная функция) к каждому элементу массива. В данной функции e представляет отдельный символ из массива.
 // e.repeat(+e): Здесь для каждого символа e, мы используем метод repeat(), чтобы повторить символ e определенное количество раз. Оператор + перед e преобразует символьную цифру в числовое значение, так что '3' становится 3.
 // .join(""): После применения map, у нас есть массив строк, каждая из которых состоит из повторяющихся символов. Метод join("") объединяет все элементы массива обратно в строку, без разделителей.
+
+// -----------------------------------------------------
+// Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+// Examples:
+// Input: 42145 Output: 54421
+// Input: 145263 Output: 654321
+// Input: 123456789 Output: 987654321
+
+function descendingOrder(n) {
+  // Преобразуем число в строку, разбиваем его на массив цифр и преобразуем их обратно в числа.
+  let arr = ("" + n).split("").map(Number);
+
+  // Сортируем массив в порядке убывания.
+  arr.sort((a, b) => b - a);
+
+  // Объединяем отсортированные цифры обратно в строку и преобразуем ее в число.
+  let result = parseInt(arr.join(""), 10);
+  return result;
+}
+
+// // function descendingOrder(n){
+//   return parseInt(n.toString().split('').sort((a, b) => b - a).join(''));
+// }
